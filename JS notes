@@ -1,0 +1,3 @@
+Both of these will ask the user for input.
+confirm("I am ok.);
+prompt("Are you ok?");

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<h1>Register</h1>
+<form>
+		<label for="first"><strong>First Name:</label>
+		<input name="first" id="first" type="text" placeholder="John" required>
+		Last Name:
+		<input name ="last" id="last" type="text" placeholder="Smith" required> 
+
+	<!-- 
+	This section is for the choice values for male or female or other 
+	-->
+<div>
+	<label for="male"><strong>Male</label>
+	<input name="sexChoice" id="male" type="radio" value="MALE">
+	<label for="female">Female</label>
+	<input name="sexChoice" id="female" type="radio" value="FEMALE">
+	<label for="other">Other</label>
+	<input name="sexChoice" id="other" type="radio" value="OTHER">
+</div>
+<!-- This section is for the email & passwords -->
+<div>
+	
+	<label for="email">Email:</label>
+	<input name="email" id="email" type="email" placeholder="email" required>
+
+	<label for="password">Password:</label>
+	<input name="password" id="password" type="password" pattern=".{5,10}" required title="Password must be between 5-10 characters"placeholder="password" required>
+
+
+</div>
+<!-- This section is for Birthday month/day/year -->
+<div>
+Birthday:
+<select name="month">
+	<option value="Month">Month</option>
+<option value="January">Jan</option>
+<option value="February">Feb</option>
+<option value="March">Mar</option>
+</select>
+
+<!-- This seciton is the dropdown for days -->
+<select name="day">
+	<option value="Day">Day</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+
+</select>
+
+<!-- This seciton is the dropdown for year -->
+<select name="year">
+<option value="Year">Year</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+
+</select>
+<div>
+<label for="agreed">I agree to the terms and conditions:</label>
+<input id="agreed" name="agreed" type="checkbox">
+</div>
+</div>
+</form>
+<button>Submit</button>
+</body>
+</html>

@@ -1,0 +1,7 @@
+hasTutor table in the database yes/no
+-yourID
+-tutorsEmail
+Then you have access to Tutor Profile info/locations(google maps)/
+
+City/State will be auto included on profile to be searchable.
+

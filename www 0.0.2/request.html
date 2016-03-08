@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://iustutor.me/dashboard.html">TutorME</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://iustutor.me/dashboard.html">Dashboard</a></li>
+                    <li><a href="http://iustutor.me/courses.html">Courses</a></li>
+                    <li><a href="http://iustutor.me/accountsettings.html">Account Settings</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="bs-docs-header" id="title" tabindex="-1">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><b id="name">John Doe</b></h3>
+                        <h5 id="isStudent">Tutor</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 " align="center" id="pic"><img alt="User Pic" 
+                            src="https://lh3.googleusercontent.com/-Nkm0V4Nd-EQ/AAAAAAAAAAI/AAAAAAAAAGs/VuI70bxyYGY/s96-c/photo.jpg"
+                            class="img-circle img-responsive"></div>
+
+                            <div class=" col-md-9 col-lg-9 ">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td><b>Major</b></td>
+                                            <td id="major">Business</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Minor</b></td>
+                                            <td id="minor">Economics</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Date of Birth</b></td>
+                                            <td id="dob">01/01/1992</td>
+                                        </tr>
+
+                                        <tr>
+                                            <tr>
+                                                <td><b>Gender</b></td>
+                                                <td id="gender">Male</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Meeting Location</b></td>
+                                                <td id="address"><a href="http://iustutor.me/map.html">New Albany, IN</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Email</b></td>
+                                                <!-- <td><a href="mailto:info@support.com">info@support.com</a></td> -->
+                                                <td id="email">jorwsmith92@gmail.com</td>
+                                            </tr>
+                                            <td><b>Phone Number</b></td>
+                                            <!--<td>123-4567-890(Landline)
+                                            <br>
+                                            <br>555-4567-890(Mobile)
+                                        </td>-->
+                                            <td id="phone">502-551-1111</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <!--<a href="#" class="btn btn-primary">My Sales Performance</a>
+                            <a href="#" class="btn btn-primary">Team Sales Performance</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <!--<a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                        -->
+                        <a href="http://iustutor.me/editaccountsettings.html" class="btn btn-success">Reply</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

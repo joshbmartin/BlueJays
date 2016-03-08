@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/courses.css">
+    <title>Course</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://iustutor.me/dashboard.html">TutorME</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://iustutor.me/dashboard.html">Dashboard</a></li>
+                    <li><a href="http://iustutor.me/courses.html">Courses</a></li>
+                    <li><a href="http://iustutor.me/accountsettings.html">Account Settings</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="bs-docs-header" id="title" tabindex="-1">
+        <div class="container">
+            <h1><b>TutorME </b> Courses</h1>
+            <!--<p>Welcome to TutorME! Use the links to navigate around the site.</p> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="span7 text-center">
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i> Add Course</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal"><i class="fa fa-minus"></i> Remove Course</button>
+
+        </div>
+    </div>
+    <div class="container" id="coursecontainer">
+        <div class="just-padding" id="courses">
+            <!-- <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Course Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            Course Description
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4"></div>
+                <div class="col-xs-6 col-md-4"></div>
+            </div>
+            -->
+
+        </div>
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- Add Course -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="addCourse()">Add Course</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Input Course ID" id="addInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove Course -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="removeCourse()">Remove Course</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Input Course ID" id="removeInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+        
+            $('.list-group-item').on('click', function() {
+                $('.glyphicon', this)
+                .toggleClass('glyphicon-chevron-right')
+                .toggleClass('glyphicon-chevron-down');
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () { getcourses() })
+    </script>
+</body>
+
+</html>

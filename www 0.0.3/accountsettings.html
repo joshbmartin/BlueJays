@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta name="google-signin-client_id" content="419066194857-m24vsu3egfb96gksruf8nm4hdtddsnoa.apps.googleusercontent.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/app.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Settings</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://iustutor.me/dashboard.html">TutorME</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://iustutor.me/dashboard.html">Dashboard</a></li>
+                    <li><a href="http://iustutor.me/courses.html">Courses</a></li>
+                    <li><a href="http://iustutor.me/accountsettings.html">Account Settings</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="bs-docs-header" id="title" tabindex="-1">
+        <div class="container">
+            <h1><b>TutorME </b>Account Settings</h1>
+            <div class="container">
+
+                <!-- <h3 id="name"><> -->
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title" ><b id="name"></b></h3>
+                    <h5 id="isStudent"></h5>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center" id="pic"></div>
+
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Major</b></td>
+                                        <td id="major"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Minor</b></td>
+                                        <td id="minor"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Date of Birth</b></td>
+                                        <td id="dob"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <tr>
+                                            <td><b>Gender</b></td>
+                                            <td id="gender"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Meeting Location</b></td>
+                                            <td id="address"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email</b></td>
+                                            <!-- <td><a href="mailto:info@support.com">info@support.com</a></td> -->
+                                            <td id="email"></td>
+                                        </tr>
+                                        <td><b>Phone Number</b></td>
+                                        <!--<td>123-4567-890(Landline)
+                                            <br>
+                                            <br>555-4567-890(Mobile)
+                                        </td>-->
+                                        <td id="phone"></td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <!--<a href="#" class="btn btn-primary">My Sales Performance</a>
+                            <a href="#" class="btn btn-primary">Team Sales Performance</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <!--<a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                        -->
+                        <a href="http://iustutor.me/editaccountsettings.html" class="btn btn-danger">Edit Account</a>
+                </div>
+
+            </div>
+            <!--<a href="#" onclick="signOut();">Sign out</a>-->
+            <div class="container" id="tutor">
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+                getUser();
+            });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.center {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+        }
+/*        
+body {
+    background-image:url("../img/desk.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+*/

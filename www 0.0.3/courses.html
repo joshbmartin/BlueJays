@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/courses.css">
+    <title>Course</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://iustutor.me/dashboard.html">TutorME</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://iustutor.me/dashboard.html">Dashboard</a></li>
+                    <li><a href="http://iustutor.me/courses.html">Courses</a></li>
+                    <li><a href="http://iustutor.me/accountsettings.html">Account Settings</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="bs-docs-header" id="title" tabindex="-1">
+        <div class="container">
+            <h1><b>TutorME </b> Courses</h1>
+            <!--<p>Welcome to TutorME! Use the links to navigate around the site.</p> -->
+        </div>
+    </div>
+    <div class="container" id="coursecontainer">
+        <div class="container">
+            <div class="span7 text-center">
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i> Add Course</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal"><i class="fa fa-minus"></i> Remove Course</button>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="just-padding" id="courses">
+                <!-- <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Course Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            Course Description
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4"></div>
+                <div class="col-xs-6 col-md-4"></div>
+            </div>
+            -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="tutortable" style="display:none;">
+        <div class="just-padding">
+            <div class="panel panel-default">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Number of Tutor(s)</th>
+                            <th>Name</th>
+                            <th>Course ID</th>
+                            <th>Profile Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tutors">
+                        <!--
+            <tr id="tutors">
+                <th scope="clickable-row">1</th>
+                <td>John Doe</td>
+                <td>Introduction to Computers and Their Use</td>
+                <td><div class="alert alert-success" role="alert"><a href="http://iustutor.me/request.html">Accepted</a></div></td>
+            </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="bs-docs-header" id="tutoraccount" tabindex="-1" style="display:none;">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><b id="name">John Doe</b></h3>
+                        <h5 id="isStudent">Tutor</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 " align="center" id="pic"></div>
+
+                            <div class=" col-md-9 col-lg-9 ">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td><b>Major</b></td>
+                                            <td id="major"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Minor</b></td>
+                                            <td id="minor"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Date of Birth</b></td>
+                                            <td id="dob"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <tr>
+                                                <td><b>Gender</b></td>
+                                                <td id="gender"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Meeting Location</b></td>
+                                                <td id="address"><a href="http://iustutor.me/map.html"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Email</b></td>
+                                                <td id="email"></td>
+                                            </tr>
+                                            <td><b>Phone Number</b></td>
+                                            <td id="phone"></td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <!--<a href="#" class="btn btn-primary">My Sales Performance</a>
+                            <a href="#" class="btn btn-primary">Team Sales Performance</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <!--<a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                        -->
+                        <a href="http://iustutor.me/editaccountsettings.html" class="btn btn-success">Request Tutor</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="tutormap" style="display:none;">
+        <!--<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJj0mcbo1uaYgRSg2E3shikkQ&key=AIzaSyAClDu9OaCGnLn1GxEzS2aCHnu8fNlT-Gw"
+        allowfullscreen></iframe>-->
+        <!--<iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAClDu9OaCGnLn1GxEzS2aCHnu8fNlT-Gw &q=New+Albany,Indiana" allowfullscreen></iframe>-->
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- Add Course -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="addCourse()">Add Course</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Input Course ID" id="addInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addCourse()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove Course -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="removeCourse()">Remove Course</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Input Course ID" id="removeInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="removeCourse()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () { getcourses();})
+    </script>
+</body>
+
+</html>
